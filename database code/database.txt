@@ -1,0 +1,31 @@
+INSERT INTO `shopping_cart`.`inventorytype` (`ID`, `NAME`, `ACTIVE`) VALUES ('1', 'Electronics', 'True');
+INSERT INTO `shopping_cart`.`inventorytype` (`ID`, `NAME`, `ACTIVE`) VALUES ('2', 'Games', 'True');
+INSERT INTO `shopping_cart`.`inventorytype` (`ID`, `NAME`, `ACTIVE`) VALUES ('3', 'Home', 'True');
+INSERT INTO `shopping_cart`.`inventorytype` (`ID`, `NAME`, `ACTIVE`) VALUES ('4', 'Cell', 'True');
+INSERT INTO `shopping_cart`.`inventorytype` (`ID`, `NAME`, `ACTIVE`) VALUES ('5', 'Stationary', 'True');
+
+
+
+INSERT INTO `shopping_cart`.`inventory` (`ID`, `INVENTORYTYPEID`, `DISCRIPTION`, `PRICE`, `ACTIVE`, `NAME`, `IMGPATH`) VALUES ('32', '1', 'This reliable, value-packed laptop combines the features you need to get the job done and a sleek, thin design you can easily take on the road.', '$486.99', 'True', 'Dell Laptop', '/img/laptop.jpeg');
+INSERT INTO `shopping_cart`.`inventory` (`ID`, `INVENTORYTYPEID`, `DISCRIPTION`, `PRICE`, `ACTIVE`, `NAME`, `IMGPATH`) VALUES ('33', '1', 'Canon Black EOS Rebel T5 Digital SLR Camera with 18 Megapixels and 18-55mm Zoom Lens Included', '$680.99', 'True', 'Camara', '/img/camara.jpg');
+UPDATE `shopping_cart`.`inventory` SET `PRICE`='$4.99' WHERE `ID`='31';
+INSERT INTO `shopping_cart`.`inventory` (`ID`, `INVENTORYTYPEID`, `DISCRIPTION`, `PRICE`, `ACTIVE`, `NAME`, `IMGPATH`) VALUES ('34', '2', 'The Spin Master Games Hedbanz Game for Adults comes with 74 cartoon cards, 6 Hedbanz, 24 scoring chips, one timer and an Instruction sheet so you can get playing right away.', '$9.99', 'True', 'Spin Master Games', '/img/SpinMaster.jpeg');
+INSERT INTO `shopping_cart`.`inventory` (`ID`, `INVENTORYTYPEID`, `DISCRIPTION`, `PRICE`, `ACTIVE`, `NAME`, `IMGPATH`) VALUES ('35', '2', 'Introducing Just Dance 2016 - the newest game from the top-selling franchise - with a new way to play! ', '$89.44', 'True', 'Xbox ', '/img/xbox.jpeg');
+INSERT INTO `shopping_cart`.`inventory` (`ID`, `INVENTORYTYPEID`, `DISCRIPTION`, `PRICE`, `ACTIVE`, `NAME`, `IMGPATH`) VALUES ('36', '3', 'Easily store additional meats and vegetables at home with this Igloo 5.5-cu. ft.', '$290.03', 'True', 'Refrigerators and Freezers ', '/img/Refrigerators.jpeg');
+INSERT INTO `shopping_cart`.`inventory` (`ID`, `INVENTORYTYPEID`, `DISCRIPTION`, `PRICE`, `ACTIVE`, `NAME`, `IMGPATH`) VALUES ('37', '3', 'The state of art steam iron from Rowenta. This DW1150 is extremely lightweight for easy handling. ', '$49.99', 'True', 'Irons ', '/img/iron.jpeg');
+INSERT INTO `shopping_cart`.`inventory` (`ID`, `INVENTORYTYPEID`, `DISCRIPTION`, `PRICE`, `ACTIVE`, `NAME`, `IMGPATH`) VALUES ('38', '4', 'The TracFone LG 441G Prepaid Cell Phone is a cell phone using minutes and data that are paid for in advance.', '$14.99', 'True', 'TracFone LG', '/img/TracFone.jpeg');
+INSERT INTO `shopping_cart`.`inventory` (`ID`, `INVENTORYTYPEID`, `DISCRIPTION`, `PRICE`, `ACTIVE`, `NAME`, `IMGPATH`) VALUES ('39', '4', 'This Android phone from Straight Talk features a four-inch touchscreen, a 5MP camera and GPS capabilities. It runs on Android 4.1 (Jelly Bean).', '$39.88', 'True', 'Savvy ', '/img/Savvy .jpeg');
+INSERT INTO `shopping_cart`.`inventory` (`ID`, `INVENTORYTYPEID`, `DISCRIPTION`, `PRICE`, `ACTIVE`, `NAME`, `IMGPATH`) VALUES ('40', '5', 'Large console display with oversized numbers tracks speed, distance, time, and calories burned', '$749.69', 'True', 'Exercise Bike', '/img/ExerciseBike.jpeg');
+INSERT INTO `shopping_cart`.`inventory` (`ID`, `INVENTORYTYPEID`, `DISCRIPTION`, `PRICE`, `ACTIVE`, `NAME`, `IMGPATH`) VALUES ('41', '5', 'Heavy duty construction and durable material', '$690.33', 'True', 'Telescopic Arm Cycle Bicycle Rack', '/img/Telescopingstand.jpeg');
+
+
+C:\Users\teken\Desktop\UI final project\Shopping_cart\img\Electronics\computer.jpg
+C:\Users\teken\Desktop\UI final project\Shopping_cart\img\Electronics\HP-Printer.jpeg
+C:\Users\teken\Desktop\UI final project\Shopping_cart\img\Games\CheckersSet.jpeg
+C:\Users\teken\Desktop\UI final project\Shopping_cart\img\Games\Chess.jpeg
+C:\Users\teken\Desktop\UI final project\Shopping_cart\img\Home\Blender.jpeg
+C:\Users\teken\Desktop\UI final project\Shopping_cart\img\Home\ToasterOven.jpeg
+C:\Users\teken\Desktop\UI final project\Shopping_cart\img\Cell\iphone.jpg
+C:\Users\teken\Desktop\UI final project\Shopping_cart\img\Cell\SamSung.jpeg
+C:\Users\teken\Desktop\UI final project\Shopping_cart\img\Stationary\envelopes.jpeg
+C:\Users\teken\Desktop\UI final project\Shopping_cart\img\Stationary\pen.jpeg
