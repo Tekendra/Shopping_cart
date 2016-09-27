@@ -1,7 +1,39 @@
-.nav-bar{
-    font-size: 20px;
-    background: bisque;
+.flex-container{
+    
+    display:flex;
+    flex-direction:row;
+    border:1px solid gray;
+    //height:650px;
+    width:1200px;
+    margin:auto;
+    background-color:red;
+    
 }
 
+.flex-left{
+   display:flex;
+    text-decoration-color: black;
+    flex-direction:column;
+    border:1px solid black;
+   // height:650px;
+    width:250px;
+   // background-color:pink;  
+    
+}
 
+.flex-right{
+   display:flex;
+    flex-direction:column;
+    //background-image: url("/static/images/landing.jpg");
+    border:1px solid black;
+    
 
+    width:950px;
+    //background-color:lightpink;  
+    
+}
+
+.thumbnail{
+    height:150px;
+    width:150px;
+}

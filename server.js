@@ -54,24 +54,7 @@ app.get("/service/inventoryType/:id",function (req,res,next) {
         });
     });
 });
-app.get("/service/inventoryType/:id/inventory",function (req,res,next) {
-    var ids=[];
-    var Id=req.params.id;
-    ids.push(Id);
-    var query ="SELECT * FROM inventory where inventoryTypeId= ?";
-    req.getConnection(function (err,connection) {
-        if(err) return next(err);
 
-        connection.query(query,ids,function (err,results) {
-            if(err){
-                console.log(err);
-                return next("Mysql error, check your query");
-            }
-            res.json(results);
-
-        });
-    });
-});
 app.get("/service/inventory",function (req,res,next) {
     var ids=[];
 
@@ -89,6 +72,27 @@ app.get("/service/inventory",function (req,res,next) {
             });
         });
 });
+
+
+app.get("/service/inventory/:id",function (req,res,next) {
+    var ids=[];
+    var Id=req.params.id;
+    ids.push(Id);
+    var query ="SELECT * FROM inventory where inventoryTypeId= ?";
+    req.getConnection(function (err,connection) {
+        if(err) return next(err);
+
+        connection.query(query,ids,function (err,results) {
+            if(err){
+                console.log(err);
+                return next("Mysql error, check your query");
+            }
+            res.json(results);
+
+        });
+    });
+});
+
 
 //setting up the static filed for hosting
 app.use(express.static(__dirname + '/'));//create shopping cart as a root

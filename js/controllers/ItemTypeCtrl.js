@@ -1,40 +1,50 @@
-angular.module('app').controller('ItemTypeCtrl',['$scope','inventory_type_service',
-                                function($scope, inventory_type_service){
-                                $scope.inventoryTypes ="";
-                                $scope.inventoryItem ="";
-                                
-                                
-//                                console.log("From Controller");
-//                                console.log(inventory_type_service.inventoryTypes);
-                                    
-                                $scope.$watch(function(){
-                                    return inventory_type_service.inventoryTypes;
+angular.module('app').controller('ItemTypeCtrl',['$scope','inventory_service',
+                                function($scope, inventory_service){
+                     
+                            
+                            $scope.inventoryTypes ="";                                    
+                             $scope.$watch(function(){
+                                    return inventory_service.inventoryTypes;
                                 },function(newVal, oldVal){
                                     if(oldVal != newVal){
-//                                        console.log("FROM watch list");
-//                                        console.log('New val');
-//                                        console.log(newVal);
-//                                        console.log('old val');
-//                                        console.log(oldVal);
+//                                        
                                         $scope.inventoryTypes= newVal;
                                         
                                     }                                    
                                 }); 
+                                    
+                        
+                            $scope.inventory="";
+                                $scope.$watch(function(){
+                                    return inventory_service.inventory;
+                                },function(newVal, oldVal){
+                                    if(oldVal != newVal){
+                                        $scope.inventory = newVal;
+                                        
+                                    }
+                                });
                                    
-                                    $scope.$watch(function(){
-                                        return inventory_type_service.inventoryItem;
-                                    }, function(newVal, oldVal){
-                                        if(oldVal != newVal){
-                                            $scope.invetoryItem = newVal;
-                                        }
-                                    })
+                            
+                            $scope.$watch(function(){
+                                return inventory_service.inventoryTypesId},
+                                          function(newVal, oldVal){
+                                                if(oldVal !=newVal)
+                                                    {
+                                                        $scope.inventoryTypesId = newVal;
+                                                    }
+                            
+                            });
+                                    
+                            $scope.inventoryItem =function(id){
+                                inventory_service.id = id;
+                                    inventory_service.getId();
+                                inventory_service.id = id;
+                                    inventory_service.getInventoryTypeIds();
+                            }
                                     
                                     
-                                    $scope.inventoryItem = function(id){
-                                
-                                  var x= inventory_type_service.getInventoryList(id);
-                                    console.log(x);
-                                    alert(x);
-                                } 
+                            
+                           
+                         
     
 }]);
